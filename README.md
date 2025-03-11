@@ -7,6 +7,7 @@ Recode all files in folder and subfolders selecting from AV1 or x265 codec based
 
 ## Usage:  
 ```
+./AllRecoder [options]
 options:  
   -d, --delete          Delete file after successfull recode, if it's size is less than --ratio of original (default: False)  
   -c, --codec {best,x265,av1}  
