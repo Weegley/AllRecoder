@@ -167,11 +167,11 @@ Treshold: {args.treshold}""")
         output_file, returncode = encode_source_file(input_file, best_codec)
         if returncode == 0:
 
-            elapsed = datetime.strptime(str(datetime.now()-start_time), "%H:%M:%S.%f")
+            elapsed = datetime.strptime(str(datetime.now() - start_time), "%H:%M:%S.%f")
             if elapsed.hour == 0:
-                print(f"{Fore.YELLOW}Elapsed time: "+datetime.strftime(elapsed, "%M:%S.{}".format(str(elapsed.microsecond)[:2])))
+                print(f"{Fore.YELLOW}Elapsed time: " + datetime.strftime(elapsed, "%M:%S.{}".format(str(elapsed.microsecond)[:2])))
             else:
-                print(f"{Fore.YELLOW}Elapsed time: "+datetime.strftime(elapsed, "%H:%M:%S.{}".format(str(elapsed.microsecond)[:2])))
+                print(f"{Fore.YELLOW}Elapsed time: " + datetime.strftime(elapsed, "%H:%M:%S.{}".format(str(elapsed.microsecond)[:2])))
 
             original_size = os.path.getsize(input_file)
             encoded_size = os.path.getsize(output_file)
